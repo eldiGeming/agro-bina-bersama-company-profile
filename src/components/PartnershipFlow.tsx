@@ -3,15 +3,13 @@ import { ArrowRight } from "lucide-react";
 
 export default function PartnershipFlow() {
   return (
-    <section id="partnership" className="py-28 bg-gradient-to-b from-white to-slate-50">
+    <section id="partnership" className="py-28 bg-[#1D3557]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="uppercase tracking-[5px] text-[#E63946] text-sm font-semibold">Partnership Program</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#E63946] mt-4">Alur Kemitraan ABB</h2>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#07244D] mt-4">Alur Kemitraan ABB</h2>
-
-          <p className="max-w-3xl mx-auto mt-6 text-slate-500 text-lg">Proses kemitraan peternakan ayam broiler yang transparan, profesional, dan berlandaskan prinsip syariah.</p>
+          <p className="max-w-3xl mx-auto mt-6 text-[#E63946] text-lg">Proses kemitraan peternakan ayam broiler yang transparan, profesional, dan berlandaskan prinsip syariah.</p>
         </div>
 
         {/* Flow */}

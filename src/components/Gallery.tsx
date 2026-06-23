@@ -6,11 +6,9 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="uppercase tracking-[4px] text-red-600 text-sm font-medium">Galeri</p>
+          <h2 className="text-5xl font-bold text-[#1D3557] mt-3">Galeri Kopsyah ABB</h2>
 
-          <h2 className="text-5xl font-bold text-[#07244D] mt-3">Kopsyah ABB</h2>
-
-          <p className="text-slate-500 mt-4 max-w-2xl mx-auto">Fasilitas modern dengan standar higienis, operasional profesional, dan penerapan prinsip syariah dalam setiap proses produksi.</p>
+          <p className="text-[#1D3557] mt-4 max-w-2xl mx-auto">Fasilitas modern dengan standar higienis, operasional profesional, dan penerapan prinsip syariah dalam setiap proses produksi.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

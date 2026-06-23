@@ -32,11 +32,11 @@ export default function Navbar() {
   };
 
   const menus = [
-    { label: "Profile", id: "profile" },
-    { label: "Products", id: "products" },
-    { label: "Legality", id: "legality" },
-    { label: "Partnership", id: "partnership" },
-    { label: "Gallery", id: "gallery" },
+    { label: "Profil", id: "profile" },
+    { label: "Produk", id: "products" },
+    { label: "Legalitas", id: "legality" },
+    { label: "Kemitraan", id: "partnership" },
+    { label: "Galeri", id: "gallery" },
   ];
 
   return (

@@ -8,11 +8,9 @@ export default function OrganizationStructure() {
         {/* Header */}
 
         <div className="text-center mb-20">
-          <p className="uppercase tracking-[4px] text-red-600 text-sm font-medium">Organisasi</p>
+          <h2 className="text-5xl font-bold text-[#1D3557] mt-3">Struktur Organisasi</h2>
 
-          <h2 className="text-5xl font-bold text-[#07244D] mt-3">Struktur Organisasi</h2>
-
-          <p className="text-slate-500 mt-4">Kepengurusan dan unit usaha Kopsyah Agro Bina Bersama</p>
+          <p className="text-[#1D3557] mt-4">Kepengurusan dan unit usaha Kopsyah Agro Bina Bersama</p>
         </div>
 
         {/* RAPAT ANGGOTA */}
@@ -107,33 +105,46 @@ export default function OrganizationStructure() {
             <p className="text-slate-500 mt-2">Bidang usaha yang dikelola oleh koperasi</p>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {organization.units.map((unit) => (
               <div
                 key={unit.title}
                 className="
-                  bg-white
-                  rounded-3xl
-                  border
-                  border-slate-200
-                  p-6
-                  shadow-md
-                  hover:shadow-xl
-                  hover:-translate-y-2
-                  transition-all
-                  duration-300
-                "
+        w-full md:w-[380px]
+        bg-white
+        rounded-3xl
+        border border-slate-200
+        p-6
+        shadow-md
+        hover:shadow-xl
+        hover:-translate-y-2
+        transition-all duration-300
+      "
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#07244D]/10 flex items-center justify-center mb-5">
                   <BriefcaseBusiness className="text-[#07244D]" />
                 </div>
 
-                <h4 className="font-bold text-lg text-[#07244D]">{unit.title}</h4>
+                <h4 className="font-bold text-xl text-[#07244D] mb-5">{unit.title}</h4>
 
-                <div className="mt-5 pt-5 border-t">
-                  <p className="text-sm text-slate-500">Kepala Unit</p>
+                <div className="border-t pt-4 space-y-4">
+                  {unit.positions.map((item, index) => (
+                    <div key={index}>
+                      <p className="text-sm font-medium text-slate-500">{item.position}</p>
 
-                  <p className="font-semibold mt-1">{unit.head}</p>
+                      {item.members ? (
+                        <ul className="mt-2 space-y-1">
+                          {item.members.map((member) => (
+                            <li key={member} className="text-slate-800 font-medium">
+                              • {member}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="font-semibold text-slate-800">{item.name}</p>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
